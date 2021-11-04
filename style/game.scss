@@ -433,3 +433,206 @@ button{
     height: auto;
 }
 
+@media screen and (max-width: 400px){
+
+    /*Utility*/
+    .container{
+        width: 400px;
+        height: 770px;
+    } 
+    
+    /*Header*/
+    .first{
+        width: 317px;
+        height: 100px;
+    }
+    .logo img{
+        height: 45px;
+        width: auto;
+    }
+    .score{
+        width: 78px;
+        height: 72px;
+        padding: 12px 0px;
+    }
+    .score p{
+        font-size: 9px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    #original, #bonus{
+        font-size: 12px;
+    }
+
+    /*Rules*/
+
+    .rules{
+        width: 400px;
+        height: 790px;
+        margin-top: -50px;  
+        .first-row{
+            flex-direction: column;
+            margin-top: 80px;
+            align-items: center;
+        }
+        .first-row img{
+            position: relative;
+            top: 460px;
+        }  
+    }
+    
+    h2{
+        margin-bottom: 100px;
+    }
+    
+     /*Gradient*/
+    #gradient{
+        position: relative;
+        bottom: 610px;
+        left: -97px;  
+      }      
+      #gradient1{
+          position: relative;
+          bottom: 610px;
+          left: 87px;
+      }
+    .gradient-one{
+        width: 130px;
+        height: 130px;
+    }
+    .gradient-two{
+        padding: 20px;
+        width: 170px;
+        height: 170px;
+    }
+    .gradient-three{
+        padding: 30px;
+        width: 230px;
+        height: 230px;
+    }
+    .gradient-four{
+        padding: 35px;
+        width: 300px;
+        height: 300px;
+    }
+
+    /*Play Again*/
+
+    #play-again{
+        flex-direction: column;
+        position: relative;
+        top: 225px;
+        width: 0px;
+        text-align: center;
+        margin: 0px;
+        h2{
+            font-size: 40px;
+            width: 230px;
+        }
+        p{
+            margin-top: 5px;
+            font-size: 12px;
+            color: hsl(237, 49%, 15%);
+        }
+    }
+
+    /*Game*/   
+
+    .first-row{
+        margin-bottom: -70px;
+    }
+    .second .icon, .game .icon, #house-card{
+        width: 130px;
+        height: 130px;
+        margin: 105px 27px 14px 27px;        
+    }
+    .icon-bg, .game .icon-bg{
+        width: 100px;
+        height: 100px;
+    }
+    .icon img{
+        width: 45px;
+        height: auto;
+    }
+    .icon-bonus{
+        width: 95px;
+        height: 95px;
+        margin: 17px;
+    }
+    .icon-bonus-bg{
+        width: 72px;
+        height: 72px;
+    }
+    .icon-bonus img{
+        width: 32px;
+        height: auto;
+    }
+    .icon-bonus.scissors{
+        position: relative;
+        bottom: 80px;
+    }
+    .bonus-first-row{
+        margin-top: 165px;
+    }
+    .bonus-first-row .icon-bonus{
+        margin: 15px 7px;
+    }    
+    .paper, .game .paper{
+        box-shadow: 0px 6px $paperShadow;
+    }
+    .scissors, .game .scissors{
+        box-shadow: 0px 6px $scissorsShadow;
+    }
+    .rock, .game .rock{
+        box-shadow: 0px 6px $rockShadow;        
+    }
+    .spock, .game .spock{
+        box-shadow: 0px 6px $spockShadow;
+    }
+    .lizard, .game .lizard{
+        box-shadow: 0px 6px $lizardShadow;
+    }
+    .game .icon-bg{       
+        box-shadow: 0px 5px inset $iconShadow;
+    }
+    .blank .icon-bg{
+        box-shadow: none;
+    }
+    .second{
+        background-size: 160px;
+       background-position-y: 170px;
+    }
+    #bonus-intro{
+        background-size: 216px;
+        background-position-y: 140px;
+    }
+    .third{
+        text-align: center;
+        margin-top: 120px;
+        margin-bottom: 50px;
+    }
+    button{
+        height: 40px;
+        width: 135px;
+    }    
+    .game{
+        padding: 0px; 
+        p{
+            font-size: 10px;
+        }       
+    }    
+    .game-div{
+        @include flex(column-reverse, center );           
+        z-index: 1;
+        margin-bottom: 148px;  
+        p{
+         margin-top: 20px;
+        }    
+     }         
+    .score.play-again{
+        width: 230px;
+        height: 50px;
+    }
+    
+}
