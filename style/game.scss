@@ -18,6 +18,13 @@ $gradientTwo: hsla(217, 16%, 45%, 0.2);
 $gradientThree: hsla(229, 25%, 31%, 0.2);
 $gradientFour: hsla(214, 47%, 23%, 0.2);
 
+@mixin flex($direction, $justifyContent) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $justifyContent;
+}
+
 /*Utility*/
 *{
     box-sizing: border-box;
@@ -28,3 +35,401 @@ html, body{
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 16px;    
 }
+.container{
+    background-color: $primalColor ;
+    width: 1366px;
+    height: 728px;
+    padding: 43px;
+    overflow: hidden;
+}
+
+
+/*Header*/
+
+.first{   
+    height: 150px;
+    width: 700px;
+    padding: 0px 30px;
+    border: solid 3px $buttonBorderColor ;
+    border-radius: 10px;
+    @include flex(row, space-between);    
+    z-index: 1;
+}
+.score{
+    width: 150px;
+    height: 100px;
+    background-color: $iconColor;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 0px;   
+    }
+h1{
+    font-size: 50px;   
+}
+p{
+    color: hsl(229, 64%, 46%);    
+    text-transform: uppercase;    
+    font-size: 12px;
+    font-weight: 700;
+}
+#original{
+    /*display: none;*/
+    font-size: 24px;
+    &:hover{
+        color: $iconColor;        
+    }
+}
+#bonus{
+    display: none;
+    font-size: 24px;
+}
+#bonus:hover{    
+    color: $iconColor;      
+    }
+
+
+/*Rules*/
+
+.rules{
+    display: none;
+    padding: 30px;
+    height: 460px;
+    width: 405px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: $iconColor;
+    position: relative;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;   
+    .first-row{
+        margin-bottom: 30px;
+    }   
+}
+h2{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+/*Gradient*/
+
+.gradient{
+    display: none;
+ }
+ #gradient{
+   position: relative;
+   bottom: 540px;
+   left: -20px;      
+ }
+ #gradient1{
+     position: relative;
+     bottom: 540px;
+     left: 610px;  
+      
+ }
+ @keyframes win{
+     0%{transform: scale(0.5);}     
+     20%{transform: scale(2);}    
+     40%{transform: scale(0.7);}     
+     60%{transform: scale(1.5);}         
+     80%{transform: scale(0.85);}    
+     100%{transform: scale(1);}
+ }
+ 
+ .gradient-one{
+     border-radius: 50%;
+     background-color: $gradientOne;
+     width: 280px;
+     height: 280px;
+ }
+ .gradient-two{
+     border-radius: 50%;
+     background-color: $gradientTwo ;
+     padding: 70px;
+     width: 420px;
+     height: 420px;    
+ }
+ .gradient-three{
+     border-radius: 50%;
+     background-color: $gradientThree ;
+     padding: 70px;
+     width: 560px;
+     height: 560px;
+ }
+ .gradient-four{
+     border-radius: 50%;
+     background-color: $gradientFour;
+     padding: 65px;
+     width: 700px;
+     height: 700px;
+     animation: win 1.5s ease-in-out ;
+ }
+ .isto{
+     animation: equal 1.5s linear;
+ }
+ @keyframes equal{
+     0%{transform: rotate(10deg);}
+    
+     35%{transform: rotate(350deg);}
+    
+     70%{transform: rotate(10deg);}
+    
+     100%{ transform: rotate(350deg); -webkit-transform: rotate(350deg); -moz-transform: rotate(350deg); -ms-transform: rotate(350deg); -o-transform: rotate(350deg); }
+ }
+ 
+ 
+ /*Main Game*/
+ .game {
+    @include flex(row, center);
+    padding: 80px;
+    .paper{
+        box-shadow: 0px 14px  $paperShadow;
+    }
+    .scissors{
+        box-shadow: 0px 14px $scissorsShadow;
+    }
+    .rock{
+        box-shadow: 0px 14px $rockShadow;       
+    }
+    .spock{
+        box-shadow: 0px 14px $spockShadow;
+    }
+    .lizard{
+        box-shadow: 0px 14px $lizardShadow;
+    }
+    p{
+        font-size: 16px;
+        color: $iconColor;
+    }
+    .icon{
+        width: 280px;
+        height: 280px;
+        margin: 70px 35px -35px 35px;
+        
+    }
+    .icon:hover{
+        transform: scale(1);
+    }
+    
+     .icon-bg{
+        width: 210px;
+        height: 210px;
+        box-shadow: 0px 11px inset $iconShadow;
+    }
+    img{
+        width: 90px;
+        height: auto;
+    }
+    .blank{    
+        background-color: $primalColor ;
+        .icon-bg{
+         background-color: $gradientFour; 
+         box-shadow: none;
+        }
+     }
+     .blank:hover{
+         transform: scale(1.2);
+     }
+}
+
+/*Play Again */
+
+#play-again{
+    display: none;
+    margin: 0px 35px;
+}
+.play-again{
+    width: 210px;
+    height: 45px;
+    p{
+        color: hsl(349, 71%, 52%);
+        font-size: 12px;
+    }
+}
+.animacija{
+    animation: anim 2s linear;
+}
+@keyframes anim{
+    0%{color: yellow;
+    transform: scale(1.2);}
+    30%{color: green;
+    transform: rotate(180deg);}
+    60%{color: red;
+    transform: scale(0.8);}
+    80%{
+    color: blue;
+    transform: rotate3d(180deg);
+    -webkit-transform: rotate3d(180deg);
+    -moz-transform: rotate3d(180deg);
+    -ms-transform: rotate3d(180deg);
+    -o-transform: rotate3d(180deg);
+}
+    100%{
+    color: violet;
+    transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    -o-transform: scale(1.7);
+}
+}
+
+/*Game*/
+
+.main{
+    @include flex(column, space-between);
+}
+.second{
+    background-image: url('../images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    @include flex(column, space-between);
+    z-index: 1;
+    display: none;
+}
+.first-row{      
+    @include flex(row, space-between);    
+    margin-bottom: -55px;
+}
+.icon{   
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $iconColor;    
+    @include flex(column, center);
+    margin: 35px;
+    animation: click 0.1s linear;
+}
+.icon:hover{
+    transform: scale(1.1);
+}
+@keyframes click{
+    0% {
+        transform: scale(1);
+       opacity: 0;
+    }
+    50% {
+        transform: scale(0.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.icon-bg{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: $iconColor;
+    @include flex(column, center);
+    box-shadow: 0px 7px inset $iconShadow;
+}
+#bonus-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/bg-pentagon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+   /* display: none;*/
+}
+.bonus-first-row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 135px;
+}
+.bonus-second-row{
+    @include flex(row, space-between);
+}
+.icon-bonus{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: $iconColor;
+    @include flex(column, center);
+    margin: 20px 20px;   
+}
+.icon-bonus:hover{
+    transform: scale(1.1);
+}
+.icon-bonus-bg{
+    width: 107px;
+    height: 107px;
+    border-radius: 50%;
+    background-color: $iconColor;
+    @include flex(column, center);
+    box-shadow: 0px 5px inset $iconShadow;
+    
+}
+.icon-bonus.scissors{
+    position: relative;
+    bottom: 125px;
+   
+}
+.paper{    
+    background-color: $paperColor ;
+    box-shadow: 0px 10px $paperShadow ;
+    
+}
+.scissors{
+    background-color: $scissorsColor;
+    box-shadow: 0px 10px $scissorsShadow;
+}
+.spock{
+    background-color: $spockColor;
+    box-shadow: 0px 10px $spockShadow;
+}
+.lizard{
+    background-color: $lizardColor;
+    box-shadow: 0px 10px $lizardShadow;        
+}
+.rock{
+    background-color: $rockColor;
+    box-shadow: 0px 10px $rockShadow;       
+}
+.third{
+    text-align: end;
+    margin-top: -20px;
+}
+button{
+    position: relative;
+    border: solid 3px $buttonBorderColor;
+    border-radius: 10px;
+    color: $iconColor;
+    text-transform: uppercase;
+    background-color:transparent;
+    height: 35px;
+    width: 120px;
+    font-size: 12px; 
+    margin-top: -15px;   
+    z-index: 1;
+}
+.start-game{
+    display: none;
+}
+
+#house-card{
+    display: none;
+}
+
+.game-div{
+   @include flex(column, center);  
+  z-index: 1;
+  h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    color: $iconColor;
+    margin-bottom: 25px;
+  }
+}
+.icon img{
+    width: 70px;
+}
+.game img{
+    width: 90px;
+    height: auto;
+}
+
