@@ -1,0 +1,30 @@
+/*Variable*/
+$iconColor: whitesmoke;
+$iconShadow: lightgray;
+$paperColor: hsl(230, 89%, 62%);
+$paperShadow: hsla(230, 89%, 65%, 0.7);
+$scissorsColor: hsl(39, 89%, 49%);
+$scissorsShadow: hsla(40, 84%, 53%, 0.7);
+$spockColor: hsl(189, 59%, 53%);
+$spockShadow: hsla(189, 58%, 57%, 0.7);
+$lizardColor: hsl(261, 73%, 60%);
+$lizardShadow: hsla(261, 72%, 63%, 0.7); 
+$rockColor: hsl(349, 71%, 52%);
+$rockShadow: hsla(349, 70%, 56%, 0.7);
+$primalColor: hsl(237, 49%, 15%);
+$buttonBorderColor: hsl(217, 16%, 45%);
+$gradientOne: violet;
+$gradientTwo: hsla(217, 16%, 45%, 0.2);
+$gradientThree: hsla(229, 25%, 31%, 0.2);
+$gradientFour: hsla(214, 47%, 23%, 0.2);
+
+/*Utility*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html, body{     
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16px;    
+}

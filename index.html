@@ -13,9 +13,10 @@
     />
 
     <title>Rock, Paper, Scissors</title>
-
-    Score Rules You Picked The House Picked You Win You Lose Play Again
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style/game.css">
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -27,84 +28,162 @@
       }
     </style>
   </head>
-    <body onload="storageScore()" >
-      <div class="container">
-       <div class="attribution"> 
-         Coded by <a href="https://github.com/tatjama">Tatjana Markovic</a>.
+  <body>
+    <div class="container">
+     <div class="attribution">       
+       Coded by <a href="https://github.com/tatjama">Tatjana Markovic</a>.
+     </div>
+   <div class="main">
+     <div class="section first">
+       <div class="logo">
+         <img  src="./images/logo.svg">
        </div>
-     <div class="main">
-       <div class="section first">
-         <div class="logo">
-           <img  src="./images/logo.svg" >
-         </div>
-        <div>
+      <div>
+        <p id="bonus">
+          Bonus Game
+        </p>
+        <p id="original">
+       Original Game
+        </p>
+      </div>
+       <div class="score">
+         <p >S c o r e</p>
+         <h1></h1>
+       </div>
+     </div>
+     
+     <!--START ORIGINAL INTRO GAME  DIV-->
+
+      <div class="section second">
+        <div class="first-row">
+          <div class="icon paper">
+            <div class="icon-bg">
+              <img src="./images/icon-paper.svg">
+            </div>
+          </div>
+          <div  class="icon scissors">
+            <div class="icon-bg">
+              <img src="./images/icon-scissors.svg">
+            </div>
+          </div>
         </div>
-         <div class="score">
-           <p >S c o r e</p>
-           <h1></h1>
-         </div>
-       </div>
-       
-       <div class="section second">
-         <div class="first-row">
-           <div class="icon-bg">
-           <img src="./images/icon-paper.svg">
-         </div>
-           <div class="icon-bg">
-             <img src="./images/icon-scissors.svg">
-         </div>
-       </div>
-           <div class="icon-bg">
+        <div  class="icon rock">
+         <div class="icon-bg">
            <img src="./images/icon-rock.svg">
+          </div>
+        </div>
+      </div>
+   </div>
+
+   <!--END ORIGINAL INTRO GAME  DIV-->
+
+   <!--START BONUS INTRO GAME DIV-->
+   
+   <div class="bonus-intro" id="bonus-intro">
+   
+     <div class="bonus-first-row">       
+       <div  class="icon-bonus spock">
+         <div class="icon-bonus-bg">
+           <img src="./images//icon-spock.svg">
          </div>
        </div>
+       <div  class="icon-bonus scissors">
+         <div class="icon-bonus-bg">
+           <img src="./images//icon-scissors.svg">
+         </div>
+       </div>
+       <div  class="icon-bonus paper">
+         <div class="icon-bonus-bg">
+           <img src="./images//icon-paper.svg">
+         </div>
+       </div>   
      </div>
-            
-     <div class="start-game">
-     <div class="game">
-       <!--PLAYER ICON-->
-       <div class="game-div">
-         <p>Y o u &nbsp P i c k e d</p>
-         
-         <div id="player-card" class="icon paper">
-           <div class="icon-bg">
-             <img id="player-card-image" src="">
-           </div>
-         </div>         
-       </div>
-       <!--Play again!-->
-       <div id="play-again" class="game-div">
-         <h2></h2>
-         <div class="score play-again">
-           <p>P l a y &nbsp A g a i n</p>
-         </div>     
-       </div>
+   
+      <div class="bonus-second-row">   
+        <div  class="icon-bonus lizard">
+           <div class="icon-bonus-bg">
+             <img src="./images//icon-lizard.svg">
+            </div>
+        </div>
+        <div  class="icon-bonus rock">
+          <div class="icon-bonus-bg">
+           <img src="./images//icon-rock.svg">
+          </div>
+        </div>   
+      </div>   
+    </div>
+   <!--START BONUS INTRO GAME DIV-->  
+   
+   <!--START GAME DIV-->   
      
-         <!--HOUSE ICON-->
-       <div class="game-div">
-         <p> T h e &nbsp H o u s e &nbsp P i c k e d</p> 
-     
-         <div id="house-card" class="icon scissors">
-           <div class="icon-bg">
-             <img id="house-card-image" src="">
-           </div>
+   <div class="start-game">
+    <div class="game">
+     <!--PLAYER ICON-->
+     <div class="game-div">
+       <p>Y o u &nbsp P i c k e d</p>       
+       <div id="player-card" class="icon paper">
+         <div class="icon-bg">
+           <img id="player-card-image" src="">
          </div>
-     
-         <!--BLANK ICON-->
-         <div id="blank" class="icon blank">
-           <div class="icon-bg"></div>
-         </div>         
-       </div>     
+       </div>       
      </div>
-     </div>   
-       
-       <div class="rules">
-         <div class="first-row">
-           <h2>Rules</h2>
-           <img  src="./images/icon-close.svg">
+     <!--Play again!-->
+     <div id="play-again" class="game-div">
+       <h2></h2>
+       <div class="score play-again">
+         <p>P l a y &nbsp A g a i n</p>
+       </div>   
+     </div>
+   
+       <!--HOUSE ICON-->
+     <div class="game-div">
+       <p> T h e &nbsp H o u s e &nbsp P i c k e d</p>    
+       <div id="house-card" class="icon scissors">
+         <div class="icon-bg">
+           <img id="house-card-image" src="">
          </div>
-         <img id="rules-image" src="./images/image-rules.svg">
        </div>
-  
-  </body>
+   
+       <!--BLANK ICON-->
+       <div id="blank" class="icon blank">
+         <div class="icon-bg"></div>
+       </div>       
+     </div> 
+
+    </div>
+   </div>
+   <!--END GAME DIV-->
+
+   <!--START RULES SECTION-->
+     <div class="section third">    
+       <button onclick="showRules()">R u l e s</button>
+     </div>
+     
+     <div class="rules">
+       <div class="first-row">
+         <h2>Rules</h2>
+         <img style="width: 20px; height: 20px;" onclick="hideRules()" src="./images/icon-close.svg">
+       </div>
+       <img id="rules-image" src="./images/image-rules-bonus.svg">
+     </div>
+    <!--END RULES SECTION-->
+
+    <!--START GRADIENT SECTION-->
+    <div id="" class="gradient">
+      <div class="gradient-four">
+        <div class="gradient-three">
+          <div class="gradient-two">
+          
+          </div>
+        </div>
+      </div>   
+    </div>
+    <!--END GRADIENT SECTION-->
+<!--
+     <script>       
+       var size = window.matchMedia('(max-width:400px)');         
+        size.addListener(displayRulesImageBonus);
+        size.addListener(displayRulesImageOriginal);     
+     </script>   -->  
+   </body>
 </html>
