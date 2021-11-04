@@ -27,7 +27,84 @@
       }
     </style>
   </head>
-  <body>
-    <div class="attribution">Coded by <a href="#">Your Name Here</a>.</div>
+    <body onload="storageScore()" >
+      <div class="container">
+       <div class="attribution"> 
+         Coded by <a href="https://github.com/tatjama">Tatjana Markovic</a>.
+       </div>
+     <div class="main">
+       <div class="section first">
+         <div class="logo">
+           <img  src="./images/logo.svg" >
+         </div>
+        <div>
+        </div>
+         <div class="score">
+           <p >S c o r e</p>
+           <h1></h1>
+         </div>
+       </div>
+       
+       <div class="section second">
+         <div class="first-row">
+           <div class="icon-bg">
+           <img src="./images/icon-paper.svg">
+         </div>
+           <div class="icon-bg">
+             <img src="./images/icon-scissors.svg">
+         </div>
+       </div>
+           <div class="icon-bg">
+           <img src="./images/icon-rock.svg">
+         </div>
+       </div>
+     </div>
+            
+     <div class="start-game">
+     <div class="game">
+       <!--PLAYER ICON-->
+       <div class="game-div">
+         <p>Y o u &nbsp P i c k e d</p>
+         
+         <div id="player-card" class="icon paper">
+           <div class="icon-bg">
+             <img id="player-card-image" src="">
+           </div>
+         </div>         
+       </div>
+       <!--Play again!-->
+       <div id="play-again" class="game-div">
+         <h2></h2>
+         <div class="score play-again">
+           <p>P l a y &nbsp A g a i n</p>
+         </div>     
+       </div>
+     
+         <!--HOUSE ICON-->
+       <div class="game-div">
+         <p> T h e &nbsp H o u s e &nbsp P i c k e d</p> 
+     
+         <div id="house-card" class="icon scissors">
+           <div class="icon-bg">
+             <img id="house-card-image" src="">
+           </div>
+         </div>
+     
+         <!--BLANK ICON-->
+         <div id="blank" class="icon blank">
+           <div class="icon-bg"></div>
+         </div>         
+       </div>     
+     </div>
+     </div>   
+       
+       <div class="rules">
+         <div class="first-row">
+           <h2>Rules</h2>
+           <img  src="./images/icon-close.svg">
+         </div>
+         <img id="rules-image" src="./images/image-rules.svg">
+       </div>
+  
   </body>
 </html>
