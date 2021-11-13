@@ -37,8 +37,8 @@ html, body{
 }
 .container{
     background-color: $primalColor ;
-    width: 1366px;
-    height: 728px;
+    width: 100%;
+    min-height: 100vh;
     padding: 43px;
     overflow: hidden;
 }
@@ -98,8 +98,8 @@ p{
     text-align: center;
     border-radius: 10px;
     background-color: $iconColor;
-    position: relative;
-    bottom: 50%;
+    position: absolute;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;   
@@ -117,19 +117,19 @@ h2{
 .gradient{
     display: none;
  }
- #gradient{
-   position: relative;
-   bottom: 540px;
-   left: -20px;      
+ .gradient.win{
+   position: absolute;
+   bottom: -220px;
+   left: -210px;      
  }
- #gradient1{
-     position: relative;
-     bottom: 540px;
-     left: 610px;  
+ .gradient.lose{
+     position: absolute;
+     bottom: -220px;
+     left: 425px;  
       
  }
  @keyframes win{
-     0%{transform: scale(0.5);}     
+     0%{ transform: scale(0.5); -webkit-transform: scale(0.5); -moz-transform: scale(0.5); -ms-transform: scale(0.5); -o-transform: scale(0.5); }     
      20%{transform: scale(2);}    
      40%{transform: scale(0.7);}     
      60%{transform: scale(1.5);}         
@@ -164,8 +164,9 @@ h2{
      width: 700px;
      height: 700px;
      animation: win 1.5s ease-in-out ;
- }
- .isto{
+     -webkit-animation: win 1.5s ease-in-out ;
+}
+ .animation-equal{
      animation: equal 1.5s linear;
  }
  @keyframes equal{
@@ -216,6 +217,7 @@ h2{
         width: 210px;
         height: 210px;
         box-shadow: 0px 11px inset $iconShadow;
+        z-index: 10;
     }
     img{
         width: 90px;
@@ -247,7 +249,7 @@ h2{
         font-size: 12px;
     }
 }
-.animacija{
+.animation-linear{
     animation: anim 2s linear;
 }
 @keyframes anim{
@@ -354,6 +356,10 @@ h2{
 }
 .icon-bonus:hover{
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 .icon-bonus-bg{
     width: 107px;
@@ -403,16 +409,23 @@ button{
     background-color:transparent;
     height: 35px;
     width: 120px;
-    font-size: 12px; 
-    margin-top: -15px;   
+    font-size: 12px;
+    margin-top: -15px;
     z-index: 1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .start-game{
     display: none;
 }
-
+#player-card{
+    position: relative;
+}
 #house-card{
     display: none;
+    position: relative;
 }
 
 .game-div{
@@ -433,7 +446,7 @@ button{
     height: auto;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 1150px){
 
     /*Utility*/
     .container{
@@ -470,7 +483,9 @@ button{
     .rules{
         width: 400px;
         height: 790px;
-        margin-top: -50px;  
+        position: absolute;
+        top: 55%;
+        bottom: none; 
         .first-row{
             flex-direction: column;
             margin-top: 80px;
@@ -487,12 +502,12 @@ button{
     }
     
      /*Gradient*/
-    #gradient{
+    .gradient.win{
         position: relative;
         bottom: 610px;
         left: -97px;  
       }      
-      #gradient1{
+      .gradient.lose{
           position: relative;
           bottom: 610px;
           left: 87px;
