@@ -42,10 +42,10 @@ function onLoad(){
 }
 
 function showRules(){
-    rules.style.display = "inherit";
+    document.querySelector('.rules-container').style.display = "inherit";
   }
   function hideRules(){
-    rules.style.display = "none";
+    document.querySelector('.rules-container').style.display = "none";
   }
 
 /**Start Change mode */

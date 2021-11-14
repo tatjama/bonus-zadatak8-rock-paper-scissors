@@ -12,11 +12,19 @@ html, body {
   font-size: 16px;
 }
 
+body {
+  position: relative;
+}
+
 .container {
-  background-color: #141539;
+  background-color: #182343;
   width: 100%;
   min-height: 100vh;
-  padding: 43px;
+  background-color: #182343;
+  /* For browsers that do not support gradients */
+  background-image: radial-gradient(circle, #1d3454, #151b3d);
+  background-repeat: no-repeat;
+  padding: 70px 0px;
   overflow: hidden;
 }
 
@@ -82,20 +90,36 @@ p {
 }
 
 /*Rules*/
-.rules {
+.rules-container {
   display: none;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(24, 35, 67, 0.9);
+  background-color: rgba(5, 5, 17, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.rules {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding: 30px;
   height: 460px;
   width: 405px;
   text-align: center;
   border-radius: 10px;
   background-color: whitesmoke;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 2;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .rules .first-row {
@@ -116,12 +140,14 @@ h2 {
   position: absolute;
   bottom: -220px;
   left: -210px;
+  z-index: -1;
 }
 
 .gradient.lose {
   position: absolute;
   bottom: -220px;
   left: 425px;
+  z-index: -1;
 }
 
 @-webkit-keyframes win {
@@ -228,8 +254,11 @@ h2 {
             transform: rotate(10deg);
   }
   35% {
+    transform: rotate(350deg);
     -webkit-transform: rotate(350deg);
-            transform: rotate(350deg);
+    -moz-transform: rotate(350deg);
+    -ms-transform: rotate(350deg);
+    -o-transform: rotate(350deg);
   }
   70% {
     -webkit-transform: rotate(10deg);
@@ -250,8 +279,11 @@ h2 {
             transform: rotate(10deg);
   }
   35% {
+    transform: rotate(350deg);
     -webkit-transform: rotate(350deg);
-            transform: rotate(350deg);
+    -moz-transform: rotate(350deg);
+    -ms-transform: rotate(350deg);
+    -o-transform: rotate(350deg);
   }
   70% {
     -webkit-transform: rotate(10deg);
@@ -326,6 +358,7 @@ h2 {
 }
 
 .game .icon-bg {
+  position: absolute;
   width: 210px;
   height: 210px;
   -webkit-box-shadow: 0px 11px inset lightgray;
@@ -339,11 +372,11 @@ h2 {
 }
 
 .game .blank {
-  background-color: #141539;
+  background-color: transparent;
 }
 
 .game .blank .icon-bg {
-  background-color: rgba(31, 55, 86, 0.2);
+  background-color: #182343;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -387,8 +420,11 @@ h2 {
   }
   60% {
     color: red;
+    transform: scale(0.8);
     -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
   }
   80% {
     color: blue;
@@ -421,8 +457,11 @@ h2 {
   }
   60% {
     color: red;
+    transform: scale(0.8);
     -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
   }
   80% {
     color: blue;
@@ -521,15 +560,21 @@ h2 {
 }
 
 .icon:hover {
+  transform: scale(1.1);
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 @-webkit-keyframes click {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
   50% {
     -webkit-transform: scale(0.2);
@@ -537,17 +582,23 @@ h2 {
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
 }
 
 @keyframes click {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
   50% {
     -webkit-transform: scale(0.2);
@@ -555,9 +606,12 @@ h2 {
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
 }
 
@@ -581,6 +635,10 @@ h2 {
           justify-content: center;
   -webkit-box-shadow: 0px 7px inset lightgray;
           box-shadow: 0px 7px inset lightgray;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 #bonus-intro {
@@ -609,7 +667,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 135px;
+  margin-top: 165px;
 }
 
 .bonus-second-row {
@@ -715,8 +773,9 @@ h2 {
 }
 
 .third {
-  text-align: end;
-  margin-top: -20px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
 }
 
 button {
@@ -783,25 +842,49 @@ button {
   height: auto;
 }
 
-@media screen and (max-width: 1150px) {
-  /*Utility*/
+@media screen and (max-width: 1000px) {
+  #play-again {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    top: 325px;
+    width: 0px;
+    text-align: center;
+    margin: 0px;
+  }
+  #play-again h2 {
+    width: 230px;
+  }
+  .gradient.lose {
+    left: 145px;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .container {
-    width: 400px;
-    height: 770px;
+    padding: 30px 0;
   }
   /*Header*/
   .first {
     width: 317px;
-    height: 100px;
+    height: 90px;
+    padding: 0 20px;
   }
   .logo img {
     height: 45px;
     width: auto;
   }
   .score {
-    width: 78px;
-    height: 72px;
-    padding: 12px 0px;
+    width: 70px;
+    height: 70px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
   }
   .score p {
     font-size: 9px;
@@ -814,11 +897,10 @@ button {
   }
   /*Rules*/
   .rules {
-    width: 400px;
-    height: 790px;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 55%;
-    bottom: none;
+    top: 50%;
   }
   .rules .first-row {
     -webkit-box-orient: vertical;
@@ -833,9 +915,6 @@ button {
   .rules .first-row img {
     position: relative;
     top: 460px;
-  }
-  h2 {
-    margin-bottom: 100px;
   }
   /*Gradient*/
   .gradient.win {
@@ -869,23 +948,17 @@ button {
   }
   /*Play Again*/
   #play-again {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: relative;
-    top: 225px;
-    width: 0px;
-    text-align: center;
-    margin: 0px;
+    top: 160px;
   }
   #play-again h2 {
     font-size: 40px;
-    width: 230px;
+    letter-spacing: -5px;
+    margin-bottom: 10px;
   }
   #play-again p {
-    margin-top: 5px;
-    font-size: 12px;
+    margin-top: 0px;
+    font-size: 16px;
+    letter-spacing: -1px;
     color: #141539;
   }
   /*Game*/
@@ -895,7 +968,7 @@ button {
   .second .icon, .game .icon, #house-card {
     width: 130px;
     height: 130px;
-    margin: 105px 27px 14px 27px;
+    margin: 95px 27px 14px 27px;
   }
   .icon-bg, .game .icon-bg {
     width: 100px;
@@ -923,7 +996,7 @@ button {
     bottom: 80px;
   }
   .bonus-first-row {
-    margin-top: 165px;
+    margin-top: 135px;
   }
   .bonus-first-row .icon-bonus {
     margin: 15px 7px;
@@ -965,9 +1038,10 @@ button {
     background-position-y: 140px;
   }
   .third {
+    width: 100%;
+    bottom: 40px;
+    right: 0;
     text-align: center;
-    margin-top: 120px;
-    margin-bottom: 50px;
   }
   button {
     height: 40px;
@@ -1000,8 +1074,8 @@ button {
     margin-top: 20px;
   }
   .score.play-again {
-    width: 230px;
-    height: 50px;
+    width: 200px;
+    height: 40px;
   }
 }
 /*# sourceMappingURL=game.css.map */
