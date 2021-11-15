@@ -1,0 +1,44 @@
+/*Header*/
+
+.first{   
+    height: 150px;
+    width: 700px;
+    padding: 0px 30px;
+    border: solid 3px $buttonBorderColor ;
+    border-radius: 10px;
+    @include flex(row, space-between);    
+    z-index: 2;
+}
+.score{
+    width: 150px;
+    height: 100px;
+    background-color: $iconColor;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 0px;   
+    }
+h1{
+    font-size: 50px;   
+}
+p{
+    color: hsl(229, 64%, 46%);    
+    text-transform: uppercase;    
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#original{
+    /*display: none;*/
+    font-size: 24px;
+    &:hover{
+        color: $iconColor;        
+    }
+}
+#bonus{
+    display: none;
+    font-size: 24px;
+}
+#bonus:hover{    
+    color: $iconColor;      
+    }

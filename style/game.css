@@ -486,6 +486,52 @@ h2 {
   }
 }
 
+.start-game {
+  display: none;
+}
+
+#player-card {
+  position: relative;
+}
+
+#house-card {
+  display: none;
+  position: relative;
+}
+
+.game-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+.game-div h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: whitesmoke;
+  margin-bottom: 25px;
+}
+
+.icon img {
+  width: 70px;
+}
+
+.game img {
+  width: 90px;
+  height: auto;
+}
+
 /*Game*/
 .main {
   display: -webkit-box;
@@ -666,7 +712,6 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
-  /* display: none;*/
 }
 
 .bonus-first-row {
@@ -808,52 +853,6 @@ button {
   -o-border-radius: 10px;
 }
 
-.start-game {
-  display: none;
-}
-
-#player-card {
-  position: relative;
-}
-
-#house-card {
-  display: none;
-  position: relative;
-}
-
-.game-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 1;
-}
-
-.game-div h2 {
-  text-transform: uppercase;
-  font-size: 36px;
-  color: whitesmoke;
-  margin-bottom: 25px;
-}
-
-.icon img {
-  width: 70px;
-}
-
-.game img {
-  width: 90px;
-  height: auto;
-}
-
 @media screen and (max-width: 1000px) {
   .second .icon, .game .icon, #house-card {
     margin-top: 95px;
@@ -965,6 +964,9 @@ button {
     height: 300px;
   }
   /*Play Again*/
+  .start-game {
+    margin-bottom: 100px;
+  }
   #play-again {
     top: 160px;
   }
@@ -1050,6 +1052,10 @@ button {
   .second {
     background-size: 160px;
     background-position-y: 170px;
+    margin-bottom: 100px;
+  }
+  .bonus-container {
+    margin-bottom: 100px;
   }
   #bonus-intro {
     background-size: 216px;

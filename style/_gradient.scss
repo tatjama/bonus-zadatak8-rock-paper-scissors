@@ -1,0 +1,67 @@
+/*Gradient*/
+.gradient{
+    display: none;
+ }
+ .gradient.win{
+   position: absolute;
+   bottom: -220px;
+   left: -210px;  
+   z-index: -1;    
+ }
+ .gradient.lose{
+     position: absolute;
+     bottom: -220px;
+     left: 425px;  
+     z-index: -1;
+ }
+ @keyframes win{
+     0%{ transform: scale(0.5); -webkit-transform: scale(0.5); -moz-transform: scale(0.5); -ms-transform: scale(0.5); -o-transform: scale(0.5); }     
+     20%{transform: scale(2);}    
+     40%{transform: scale(0.7);}     
+     60%{transform: scale(1.5);}         
+     80%{transform: scale(0.85);}    
+     100%{transform: scale(1);}
+ }
+ 
+ .gradient-one{
+     border-radius: 50%;
+     background-color: $gradientOne;
+     width: 280px;
+     height: 280px;
+ }
+ .gradient-two{
+     border-radius: 50%;
+     background-color: $gradientTwo ;
+     padding: 70px;
+     width: 420px;
+     height: 420px;    
+ }
+ .gradient-three{
+     border-radius: 50%;
+     background-color: $gradientThree ;
+     padding: 70px;
+     width: 560px;
+     height: 560px;
+ }
+ .gradient-four{
+     border-radius: 50%;
+     background-color: $gradientFour;
+     padding: 65px;
+     width: 700px;
+     height: 700px;
+     animation: win 1.5s ease-in-out ;
+     -webkit-animation: win 1.5s ease-in-out ;
+}
+ .animation-equal{
+     animation: equal 1.5s linear;
+ }
+ @keyframes equal{
+     0%{transform: rotate(10deg);}
+    
+     35%{ transform: rotate(350deg); -webkit-transform: rotate(350deg); -moz-transform: rotate(350deg); -ms-transform: rotate(350deg); -o-transform: rotate(350deg); }
+    
+     70%{transform: rotate(10deg);}
+    
+     100%{ transform: rotate(350deg); -webkit-transform: rotate(350deg); -moz-transform: rotate(350deg); -ms-transform: rotate(350deg); -o-transform: rotate(350deg); }
+ }
+ 

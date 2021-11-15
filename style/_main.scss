@@ -1,0 +1,132 @@
+ /*Main Game*/
+ .game {
+    @include flex(row, center);
+    padding: 80px;
+    .paper{
+        box-shadow: 0px 14px  $paperShadow;
+    }
+    .scissors{
+        box-shadow: 0px 14px $scissorsShadow;
+    }
+    .rock{
+        box-shadow: 0px 14px $rockShadow;       
+    }
+    .spock{
+        box-shadow: 0px 14px $spockShadow;
+    }
+    .lizard{
+        box-shadow: 0px 14px $lizardShadow;
+    }
+    p{
+        font-size: 16px;
+        color: $iconColor;
+    }
+    .icon{
+        width: 280px;
+        height: 280px;
+        margin: 70px 35px -35px 35px;
+    }
+    .icon:hover{
+        transform: scale(1);
+    }    
+     .icon-bg{
+        position: absolute;
+        width: 210px;
+        height: 210px;
+        box-shadow: 0px 11px inset $iconShadow;
+        z-index: 10;
+    }
+    img{
+        width: 90px;
+        height: auto;
+    }
+    .blank{    
+        background-color: transparent ;
+        .icon-bg{
+         background-color: $primalColor; 
+         box-shadow: none;
+        }
+     }
+     .blank:hover{
+         transform: scale(1.2);
+     }
+}
+
+/*Play Again */
+
+#play-again{
+    display: none;
+    margin: 0px 35px;
+}
+.play-again{
+    width: 210px;
+    height: 45px;
+    cursor: pointer;
+    p{
+        color: hsl(349, 71%, 52%);
+        font-size: 12px;
+    }
+}
+.animation-linear{
+    animation: anim 2s linear;
+}
+@keyframes anim{
+    0%{color: yellow;
+    transform: scale(1.2);}
+    30%{color: green;
+    transform: rotate(180deg);}
+    60%{
+    color: red;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+}
+    80%{
+    color: blue;
+    transform: rotate3d(180deg);
+    -webkit-transform: rotate3d(180deg);
+    -moz-transform: rotate3d(180deg);
+    -ms-transform: rotate3d(180deg);
+    -o-transform: rotate3d(180deg);
+}
+    100%{
+    color: violet;
+    transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    -o-transform: scale(1.7);
+}
+}
+
+
+.start-game{
+    display: none;
+}
+#player-card{
+    position: relative;
+}
+#house-card{
+    display: none;
+    position: relative;
+}
+
+.game-div{
+   @include flex(column, center);  
+  z-index: 1;
+  h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    color: $iconColor;
+    margin-bottom: 25px;
+  }
+}
+.icon img{
+    width: 70px;
+}
+.game img{
+    width: 90px;
+    height: auto;
+}
