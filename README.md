@@ -13,8 +13,14 @@
   - [Author](#author)
 
 ## Overview
-![Overview](./images/screenshots/over.jpg)
+![Overview](./images/screenshots/paper-rock1.jpg)
+![Overview](./images/screenshots/paper-rock2.jpg)
+![Overview](./images/screenshots/paper-rock3.jpg)
+![Overview](./images/screenshots/paper-rock4.jpg)
 
+User can switch between different versions of the game by clicking button on the header:
+- original game
+- or bonus game.
 ### Rules
 
 If the player wins, they gain 1 point. If the computer wins, the player loses one point.
@@ -51,16 +57,29 @@ Your users should be able to:
 - **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 ### Screenshot
 
-![Desktop-init ](./images/screenshots/dt.png)
-![Desktop-Add-Task ](./images/screenshots/dt-add.png)
+![Desktop ](./images/screenshots/dt.png)
+![Desktop-Bonus ](./images/screenshots/dt-bonus.png)
 ![Desktop-Active ](./images/screenshots/dt-active.png)
-![Desktop-Dragg&Drop ](./images/screenshots/dt-drop.png)
-![Tablet-768 ](./images/screenshots/tablet.png)
-![Tablet-landscape ](./images/screenshots/tablet-ls.png)
-![Mobile-375 ](./images/screenshots/mobile.png)
-![Mobile-ls ](./images/screenshots/mobile-ls.png)
-![Mobile-add-task ](./images/screenshots/mobile-add.png)
-![Mobile-Drop ](./images/screenshots/mobile-drop.png)
+![Desktop-Active-Bonus ](./images/screenshots/dt-active-bonus.png)
+![Desktop Rules](./images/screenshots/dt-rules.png)
+![Desktop-Rules Bonus ](./images/screenshots/dt-rules-bonus.png)
+![Desktop-Active ](./images/screenshots/dt-blank.png)
+![Desktop-Active-Bonus ](./images/screenshots/dt-play.png)
+![Tablet ](./images/screenshots/tablet.png)
+![Tablet-Bonus ](./images/screenshots/tablet-bonus.png)
+![Tablet Rules](./images/screenshots/tablet-rules.png)
+![Tablet-Rules Bonus ](./images/screenshots/tablet-bonus-rules.png)
+![Tablet-Blank ](./images/screenshots/tablet-blank.png)
+![Tablet-Play ](./images/screenshots/tablet-play-ls.png)
+![Tablet-Landscape ](./images/screenshots/tablet-ls.png)
+![Tablet-Landscape Bonus ](./images/screenshots/tablet-bonus-ls.png)
+![Mobile ](./images/screenshots/mobile.png)
+![Mobile-Bonus ](./images/screenshots/mobile-bonus.png)
+![Mobile Rules](./images/screenshots/mobile-rules.png)
+![Mobile-Rules Bonus ](./images/screenshots/mobile-rules-bonus.png)
+![Mobile-Active ](./images/screenshots/mobile-blank.png)
+![Mobile-Active-Bonus ](./images/screenshots/mobile--play.png)
+![Mobile-landscape](./images/screenshots/mobile-ls.png)
 
 ### Links
 
@@ -79,7 +98,6 @@ Your users should be able to:
 7. Create JavaScript  for game original
 8. Create JavaScript for game bonus
 9. Responsive Mobile
-
 10. Responsive Tablet Style
 11. Manual Test for bugs
 12. Create screenshots

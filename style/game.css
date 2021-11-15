@@ -935,14 +935,14 @@ button {
   }
   /*Gradient*/
   .gradient.win {
-    position: relative;
-    bottom: 610px;
-    left: -97px;
+    position: absolute;
+    bottom: -87px;
+    left: -85px;
   }
   .gradient.lose {
-    position: relative;
-    bottom: 610px;
-    left: 87px;
+    position: absolute;
+    bottom: -87px;
+    left: 98px;
   }
   .gradient-one {
     width: 130px;
