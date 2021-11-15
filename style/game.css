@@ -48,7 +48,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 1;
+  z-index: 2;
 }
 
 .score {
@@ -69,6 +69,7 @@ p {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 #original {
@@ -94,7 +95,6 @@ p {
   display: none;
   width: 100%;
   min-height: 100%;
-  background-color: rgba(24, 35, 67, 0.9);
   background-color: rgba(5, 5, 17, 0.7);
   position: absolute;
   top: 0;
@@ -124,6 +124,10 @@ p {
 
 .rules .first-row {
   margin-bottom: 30px;
+}
+
+.rules .rules-hide {
+  cursor: pointer;
 }
 
 h2 {
@@ -395,6 +399,7 @@ h2 {
 .play-again {
   width: 210px;
   height: 45px;
+  cursor: pointer;
 }
 
 .play-again p {
@@ -517,6 +522,10 @@ h2 {
           justify-content: space-between;
   z-index: 1;
   display: none;
+}
+
+.second .icon {
+  cursor: pointer;
 }
 
 .first-row {
@@ -642,6 +651,7 @@ h2 {
 }
 
 #bonus-intro {
+  padding-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,7 +677,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 165px;
+  margin-top: 105px;
 }
 
 .bonus-second-row {
@@ -691,6 +701,7 @@ h2 {
   height: 140px;
   border-radius: 50%;
   background-color: whitesmoke;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -789,6 +800,7 @@ button {
   width: 120px;
   font-size: 12px;
   margin-top: -15px;
+  cursor: pointer;
   z-index: 1;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -843,6 +855,12 @@ button {
 }
 
 @media screen and (max-width: 1000px) {
+  .second .icon, .game .icon, #house-card {
+    margin-top: 95px;
+  }
+  #bonus-intro {
+    margin-top: 30px;
+  }
   #play-again {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -996,7 +1014,7 @@ button {
     bottom: 80px;
   }
   .bonus-first-row {
-    margin-top: 135px;
+    margin-top: 115px;
   }
   .bonus-first-row .icon-bonus {
     margin: 15px 7px;
@@ -1036,6 +1054,7 @@ button {
   #bonus-intro {
     background-size: 216px;
     background-position-y: 140px;
+    margin-top: 0px;
   }
   .third {
     width: 100%;

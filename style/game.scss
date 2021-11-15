@@ -58,7 +58,7 @@ body{
     border: solid 3px $buttonBorderColor ;
     border-radius: 10px;
     @include flex(row, space-between);    
-    z-index: 1;
+    z-index: 2;
 }
 .score{
     width: 150px;
@@ -76,6 +76,7 @@ p{
     text-transform: uppercase;    
     font-size: 12px;
     font-weight: 700;
+    cursor: pointer;
 }
 #original{
     /*display: none;*/
@@ -92,13 +93,11 @@ p{
     color: $iconColor;      
     }
 
-
 /*Rules*/
 .rules-container{
     display: none;
     width: 100%;
     min-height: 100%;
-    background-color: rgba(24, 35, 67, 0.9);
     background-color: rgba(5, 5, 17, 0.7);
     position: absolute;
     top: 0;
@@ -126,6 +125,9 @@ p{
     -o-border-radius: 10px;
     .first-row{
         margin-bottom: 30px;
+    }
+    .rules-hide{
+        cursor: pointer;
     }
 }
 h2{
@@ -229,7 +231,6 @@ h2{
         width: 280px;
         height: 280px;
         margin: 70px 35px -35px 35px;
-        
     }
     .icon:hover{
         transform: scale(1);
@@ -266,6 +267,7 @@ h2{
 .play-again{
     width: 210px;
     height: 45px;
+    cursor: pointer;
     p{
         color: hsl(349, 71%, 52%);
         font-size: 12px;
@@ -317,6 +319,9 @@ h2{
     @include flex(column, space-between);
     z-index: 1;
     display: none;
+    .icon{
+        cursor: pointer;
+    }
 }
 .first-row{      
     @include flex(row, space-between);    
@@ -326,7 +331,7 @@ h2{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: $iconColor;    
+    background-color: $iconColor;  
     @include flex(column, center);
     margin: 35px;
     animation: click 0.1s linear;
@@ -373,6 +378,7 @@ h2{
     -o-border-radius: 50%;
 }
 #bonus-intro{
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -385,7 +391,7 @@ h2{
 .bonus-first-row{
     display: flex;
     flex-direction: row;
-    margin-top: 165px;
+    margin-top: 105px;
 }
 .bonus-second-row{
     @include flex(row, space-between);
@@ -395,6 +401,7 @@ h2{
     height: 140px;
     border-radius: 50%;
     background-color: $iconColor;
+    cursor:pointer;
     @include flex(column, center);
     margin: 20px 20px;   
 }
@@ -457,6 +464,7 @@ button{
     width: 120px;
     font-size: 12px;
     margin-top: -15px;
+    cursor: pointer;
     z-index: 1;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -493,6 +501,12 @@ button{
 }
 
 @media screen and (max-width: 1000px){
+    .second .icon, .game .icon, #house-card{
+        margin-top: 95px;
+    }
+    #bonus-intro {
+        margin-top: 30px;
+    }
     #play-again{
         flex-direction: column;
         position: relative;
@@ -645,7 +659,7 @@ button{
         bottom: 80px;
     }
     .bonus-first-row{
-        margin-top: 135px;
+        margin-top: 115px;
     }
     .bonus-first-row .icon-bonus{
         margin: 15px 7px;
@@ -678,6 +692,7 @@ button{
     #bonus-intro{
         background-size: 216px;
         background-position-y: 140px;
+        margin-top: 0px;
     }
     .third{
         width: 100%;
