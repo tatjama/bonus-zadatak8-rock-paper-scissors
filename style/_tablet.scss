@@ -1,0 +1,22 @@
+@media screen and (max-width: 1000px){
+    .second .icon, .game .icon, #house-card{
+        margin-top: 95px;
+    }
+    #bonus-intro {
+        margin-top: 30px;
+    }
+    #play-again{
+        flex-direction: column;
+        position: relative;
+        top: 325px;
+        width: 0px;
+        text-align: center;
+        margin: 0px;
+        h2{            
+            width: 230px;
+        }        
+    }
+    .gradient.lose{
+        left: 145px;
+    }
+}
